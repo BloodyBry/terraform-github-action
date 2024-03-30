@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_instance" "ec2_example" {
   ami           = "ami-08116b9957a259459"
   instance_type = "t2.micro"
-  key_name      = "new_key"
+  key_name      = "k"
 
   tags = {
     Name = "public_instance"
@@ -15,7 +15,7 @@ resource "aws_instance" "ec2_example" {
 }
 
 resource "aws_key_pair" "deployer" {
-  key_name   = "new_key"           
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFMPy2RQIFCSy5+rdy9/scn+7BOO75+QzLmFQ5HmKiyEDkjwF/bkDgiXHD9b/IBGXyxQXMO7wQK1zTwioZlaB16PpyptUV7xOu8Y3zjv/nItA7CJw/9eA7iFharFHAUkIg7lNgbkY2uxKUENSpqH86tHJ1ueiOGftUTayA+PPkhPiCS7Khxggxlz1Y4+HS7QTxnpQmgN+gDR+ErxsqydXsCGFRkypTvPE/HSf7Ybp9era+zTfBYX302hAQ8DBfXCZ7CPJFMkpUMDTH826nuv9ARWKAzLleWvZSVPZEN26ktHxxHI7Rl8NJXeNeM06uMt4KgazhIM+XHOifIqwd0ZMr nassim@DESKTOP-C2DPHLV"
+  key_name   = "k"           
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCftQmcKZzlR+G3fw0Ph8RUWm76Xkl1g0aiZEf5VT9UiS842bogorWro17qNyZP3ETzYWEtTIrKVZ5skWynEYpR9zpJP7bThCyRcDmYv/TRkgENrgmtMjAUYZx3Kfy5nw8yTMlReOVa4lcWi1d65cu9DaICR12LzuvQvn02L9WLI4y1j2JFlPAuOLpSBaOMHlR7YXqkkwGlHeVoNhvaHJVtml3tJpDkG0Srh298VowyO3CNwPmoSVUBhNzosnmntnxJWYL0W4ibcMjMG9WXf0Xf5oyKZrtMcJX0NlaEomPIh42zYOh6F8NMwnZ/3gtLBMlSNe9jIS9EN4OB86P9DOr nassim@DESKTOP-C2DPHLV"
      
 }
